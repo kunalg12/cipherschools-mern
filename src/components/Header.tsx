@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../public/cipherschool-icon.png";
 import profile from "../../public/ProfilePictureMaker.png";
+import watchPoints from "../../public/watchPoints.svg";
+import { Stack, Switch } from "@chakra-ui/react";
 import {
   Button,
   Flex,
@@ -26,8 +28,8 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <Flex justifyContent="space-between"  mt={3} align="right">
-      <Flex alignItems='center'>
+    <Flex justifyContent="space-between" mt={3} align="right">
+      <Flex alignItems="center">
         {/* HAMBURGER */}
         <Icon as={GiHamburgerMenu} mr={5} fontSize={20} />
         <Flex cursor="pointer" textAlign="center" justifyItems="center">
@@ -61,7 +63,7 @@ function Header() {
         </Menu>
       </Flex>
 
-      <Flex alignItems='center'>
+      <Flex alignItems="center">
         <InputGroup>
           <InputLeftElement>
             <Icon
@@ -85,11 +87,17 @@ function Header() {
           <Input placeholder="Basic usage" rounded="full" />
         </InputGroup>
         {/* MENU ICON  */}
-        <Icon as={MdNotificationsNone} />
+        <Icon ml={7} as={MdNotificationsNone} />
         {/* PROFILE MENU */}
-        <Menu >
-          <MenuButton>
-            <Image id="profile-pic" src={profile} alt="profile-pic" width={30} height={20} />
+        <Menu>
+          <MenuButton ml={7}>
+            <Image
+              id="profile-pic"
+              src={profile}
+              alt="profile-pic"
+              width={30}
+              height={20}
+            />
           </MenuButton>
           <MenuList>
             <MenuGroup title="Profile">
@@ -101,6 +109,12 @@ function Header() {
             </MenuGroup>
           </MenuList>
         </Menu>
+        <Flex ml={7}>
+          <Image src={watchPoints} alt="point" />
+        </Flex>
+        <Stack ml={7} mr={10} align="center" direction="row">
+            <Switch size="md" colorScheme='yellow'/>
+          </Stack>
       </Flex>
     </Flex>
   );
