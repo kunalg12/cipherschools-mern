@@ -33,7 +33,8 @@ function Header() {
         {/* HAMBURGER */}
         <Icon as={GiHamburgerMenu} mr={5} fontSize={20} />
         <Flex cursor="pointer" textAlign="center" justifyItems="center">
-          <Image src={logo} alt="icon" height={35} width={45} />
+          {/* CIPHER LOGO */}
+          <Image src={logo} alt="icon" height={10} width={40} />
           <Text ml={2} fontSize="2xl" as="b">
             CipherSchools
           </Text>
@@ -96,7 +97,7 @@ function Header() {
               src={profile}
               alt="profile-pic"
               width={30}
-              height={20}
+              height={30}
             />
           </MenuButton>
           <MenuList>
