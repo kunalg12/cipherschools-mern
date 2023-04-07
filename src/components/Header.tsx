@@ -88,7 +88,7 @@ function Header() {
           <Input placeholder="Basic usage" rounded="full" />
         </InputGroup>
         {/* MENU ICON  */}
-        <Icon ml={7} as={MdNotificationsNone} />
+        <Icon ml={7} fontSize='2xl' as={MdNotificationsNone} />
         {/* PROFILE MENU */}
         <Menu>
           <MenuButton ml={7}>
@@ -96,8 +96,8 @@ function Header() {
               id="profile-pic"
               src={profile}
               alt="profile-pic"
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
           </MenuButton>
           <MenuList>
@@ -111,11 +111,11 @@ function Header() {
           </MenuList>
         </Menu>
         <Flex ml={7}>
-          <Image src={watchPoints} alt="point" />
+          <Image src={watchPoints} alt="point" width={40} height={40} />
         </Flex>
         <Stack ml={7} mr={10} align="center" direction="row">
-            <Switch size="md" colorScheme='yellow'/>
-          </Stack>
+          <Switch size="md" colorScheme="yellow" />
+        </Stack>
       </Flex>
     </Flex>
   );
